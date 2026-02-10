@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>My Site</title>
+	<style>
+		:root{--accent:#2563eb;--muted:#6b7280;--bg:#f8fafc}
+		*{box-sizing:border-box}
+		body{margin:0;font-family:Inter,system-ui,Segoe UI,Helvetica,Arial;color:#0f172a;background:var(--bg)}
+		header{background:#fff;border-bottom:1px solid #e6eef8}
+		.container{max-width:1000px;margin:0 auto;padding:24px}
+		.brand{display:flex;gap:16px;align-items:center}
+		.logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:inline-block}
+		nav{margin-left:auto}
+		.nav-links{display:flex;gap:12px;list-style:none;padding:0;margin:0}
+		.nav-links a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:6px}
+		.nav-links a:hover{background:#eef6ff;color:var(--accent)}
+		main{padding:48px 0}
+		.hero{display:grid;gap:18px}
+		h1{margin:0;font-size:clamp(1.5rem,2.5vw,2.25rem)}
+		p.lead{margin:0;color:var(--muted)}
+		.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:20px}
+		.card{background:#fff;padding:18px;border-radius:10px;box-shadow:0 1px 2px rgba(15,23,42,0.04);border:1px solid #eef2ff}
+		.card h3{margin:0 0 8px 0}
+		footer{padding:24px 0;color:var(--muted);font-size:0.9rem}
+		.muted{color:var(--muted)}
+		@media (prefers-color-scheme:dark){body{background:#071029;color:#e6eef8}header, .card{background:#07172a;border-color:#07203a}}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="container" style="display:flex;align-items:center">
+			<div class="brand">
+				<span class="logo" aria-hidden="true"></span>
+				<div>
+					<strong>My Site</strong>
+					<div class="muted">A small place to link to projects and pages</div>
+				</div>
+			</div>
+			<nav>
+				<ul class="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="container">
+		<section class="hero">
+			<div>
+				<h1>Welcome — make this homepage your own</h1>
+				<p class="lead">Quick links below lead to placeholder pages. Create the matching files (for example <code>about.html</code>) and the links will work.</p>
+			</div>
+
+			<div class="grid">
+				<article class="card">
+					<h3>About</h3>
+					<p class="muted">Tell visitors who you are. Link: <a href="about.html">about.html</a></p>
+				</article>
+				<article class="card">
+					<h3>Projects</h3>
+					<p class="muted">Showcase your work. Link: <a href="projects.html">projects.html</a></p>
+				</article>
+				<article class="card">
+					<h3>Blog</h3>
+					<p class="muted">Write updates and notes. Link: <a href="blog.html">blog.html</a></p>
+				</article>
+				<article class="card">
+					<h3>Contact</h3>
+					<p class="muted">Ways to get in touch. Link: <a href="contact.html">contact.html</a></p>
+				</article>
+			</div>
+
+			<div style="margin-top:18px;color:var(--muted)">
+				<strong>Tip:</strong> To add a new page, create a file next to this one (for example <code>projects.html</code>) and include the same header/nav so navigation stays consistent.
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="container">
+			<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+				<div class="muted">© <!-- year auto --> <span id="year"></span> My Site</div>
+				<div class="muted">Built with a simple static layout — add pages to expand.</div>
+			</div>
+		</div>
+	</footer>
+
+	<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
+
